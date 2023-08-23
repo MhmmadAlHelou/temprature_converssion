@@ -14,7 +14,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Temprature')),
+      appBar: AppBar(title: const Text('Temprature')),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
               },
             ),
             RadioListTile(
-              title: Text('Fahrenheit'),
+              title: const Text('Fahrenheit'),
               value: true,
               groupValue: isFah,
               onChanged: (nValue) {
@@ -49,7 +49,7 @@ class _HomeState extends State<Home> {
               },
             ),
             RadioListTile(
-              title: Text('Celeius'),
+              title: const Text('Celeius'),
               value: false,
               groupValue: isFah,
               onChanged: (nValue) {
@@ -66,7 +66,7 @@ class _HomeState extends State<Home> {
                   showDialog(
                     context: context,
                     builder: (context) => AlertDialog(
-                      title: Text('The result'),
+                      title: const Text('The result'),
                       content: isFah
                           ? Text('$inTemp Fahrenheit = $outTemp Celeius')
                           : Text('$inTemp Celeius = $outTemp Fahrenheit'),
@@ -74,7 +74,7 @@ class _HomeState extends State<Home> {
                   );
                 });
               },
-              child: Text('Convert'),
+              child: const Text('Convert'),
             ),
           ],
         ),
